@@ -1,0 +1,2 @@
+INSERT INTO account ( name,email,balance) VALUES ( 'Tinus Jackson','jacksontinus96@gmail.com', 1000);
+INSERT INTO account (name,email,balance) VALUES ( 'Tinus Work','marthinus.jackson@outtask.nl', 2000);

@@ -1,0 +1,4 @@
+spring:
+  debug: true
+  application:
+    name: "Assignment"
