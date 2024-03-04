@@ -21,8 +21,8 @@ Create a simple microservice ecosystem that can behave like a very simple transa
 1. [x] Git Repo
 2. [x] Create Initial application 
 3. [x] Create Account Service - Account Entity / Repository / Service / Controller
-4. [ ] Create Transaction Service - Transaction Entity / Repository / Service / Controller
-5. [ ] Create Test Cases
+4. [X] Create Transaction Service - Transaction Entity / Repository / Service / Controller
+5. [X] Create Test Cases
 6. [ ] Create Dockerfile
 7. [ ] Create Docker-compose
 8. [ ] Create Documentation

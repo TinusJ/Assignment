@@ -21,7 +21,7 @@ public class TransactionController {
 
     @PostMapping("/transfer")
     public void transfer(@RequestBody TransactionRecord transactionRecord) {
-        log.info("Transfer money");
+        log.debug("Transfer money");
         transactionService.transfer(transactionRecord.sourceAccountEmail(), transactionRecord.targetAccountEmail(), transactionRecord.amount());
     }
 }

@@ -28,7 +28,7 @@ public class AccountController {
 
     @GetMapping("/{email}")
     public ResponseEntity<AccountRecord> viewAccount(@PathVariable String email) {
-        log.info("Viewing account");
+        log.debug("Viewing account");
         AccountRecord account = accountService.viewAccount(email);
 
         return ResponseEntity.ok(account);
