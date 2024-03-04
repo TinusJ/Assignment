@@ -1,0 +1,17 @@
+spring:
+  debug: true
+  application:
+    name: "Assignment"
+  datasource:
+    url: jdbc:postgresql://postgres:5432/assignment
+    username: postgres
+    password: "@Tinus"
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: default
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true

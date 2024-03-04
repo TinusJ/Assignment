@@ -23,8 +23,8 @@ Create a simple microservice ecosystem that can behave like a very simple transa
 3. [x] Create Account Service - Account Entity / Repository / Service / Controller
 4. [X] Create Transaction Service - Transaction Entity / Repository / Service / Controller
 5. [X] Create Test Cases
-6. [ ] Create Dockerfile
-7. [ ] Create Docker-compose
+6. [X] Create Dockerfile
+7. [X] Create Docker-compose
 8. [ ] Create Documentation
 
 
@@ -34,3 +34,7 @@ Create a simple microservice ecosystem that can behave like a very simple transa
 ```cd target```
 
 ```java -jar .\assignment-0.0.1-SNAPSHOT.jar --spring.profiles.active=local```
+
+
+### **Docker**
+```docker-compose up -d```

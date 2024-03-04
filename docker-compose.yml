@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: "postgres"
+    container_name: postgres
+    restart: always
+    ports:
+      - "5431:5432"
+    environment:
+      POSTGRES_PASSWORD: "@Tinus"
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+      POSTGRES_DB: assignment
+#    volumes:
+#      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+
+  server_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "backend:v0.0.1"
+    container_name: assignment_api
+    ports:
+      - "8080:8080"
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+    depends_on:
+      - postgres
+
