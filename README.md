@@ -25,7 +25,7 @@ Create a simple microservice ecosystem that can behave like a very simple transa
 5. [X] Create Test Cases
 6. [X] Create Dockerfile
 7. [X] Create Docker-compose
-8. [ ] Create Documentation
+8. [X] Create Documentation
 
 
 ### **Run**
@@ -38,3 +38,37 @@ Create a simple microservice ecosystem that can behave like a very simple transa
 
 ### **Docker**
 ```docker-compose up -d```
+
+### **API**
+##### Postman Collection
+[Assignment.postman_collection.json](Assignment.postman_collection.json)
+
+##### Create Account
+```
+curl --location 'http://localhost:8080/api/v1/accounts/create' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=24EC3ED0959E457C74140C3F4BDEED06' \
+--data-raw '{
+    "name":"Tinus",
+    "email":"Tinus2@gmail.com",
+    "balance":12000
+}'
+```
+
+##### View Account
+```
+curl --location 'http://localhost:8080/api/v1/accounts/Tinus2@gmail.com' \
+--header 'Cookie: JSESSIONID=5E4B63F6A855D06BD7E4F514FA51A34E'
+```
+
+##### Transfer 
+```
+curl --location 'http://localhost:8080/api/v1/transactions/transfer' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: JSESSIONID=24EC3ED0959E457C74140C3F4BDEED06' \
+--data-raw '{
+    "sourceAccountEmail":"Tinus2@gmail.com",
+    "targetAccountEmail":"Tinus2@gmail.com",
+    "amount":13000
+}'
+```
